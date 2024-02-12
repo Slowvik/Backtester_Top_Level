@@ -1,0 +1,5 @@
+1. Naming conventions:
+	> Global constants are in UPPER_CASE
+	> Other variables are in snake_case
+
+	> All functions are in camelCase()
