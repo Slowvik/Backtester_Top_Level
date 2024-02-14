@@ -1,2 +1,3 @@
 *.exe
 /Input Files/*.csv
+.idea
