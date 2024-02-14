@@ -56,9 +56,9 @@ class Strategy
 
 Strategy::Strategy(string date)
 {
-	string file_name_instruments = date + "_instruments.txt";
-	string file_name_timers = date + "_timers.txt";
-	string file_name_capital = date + "_capital.txt";
+	string file_name_instruments = filepath_common + date + "_instruments.txt";
+	string file_name_timers = filepath_common + date + "_timers.txt";
+	string file_name_capital = filepath_common + date + "_capital.txt";
 	current_time = START_OF_DAY;
 
 	ifstream fin_instruments, fin_timers, fin_capital;
@@ -131,7 +131,7 @@ vector<int> Strategy::OnMarketDataUpdate(vector<long long> m)//Timestamp(0), ID(
 
 	else if (portfolio[m[1]] > 0)
 	{
-		if (abs(Total_PnL / double(portfolio[m[1]])) < (1-TAX) * double(m[2]))//10% tax on best bid
+		if (1.3*abs(Total_PnL / double(portfolio[m[1]])) < (1-TAX) * double(m[2]))//10% tax on best bid
 		{
 			order[0] = m[1];
 			order[1] = m[2];
@@ -177,12 +177,12 @@ void Strategy::OnTimer(long long timer_increment)
 		{
 			if (!trade_list[i].empty())
 			{
-				if (*trade_list[i].rbegin() > *trade_list[i].begin()) //Prices rising in the last timer
+				if (*trade_list[i].rbegin() < *trade_list[i].begin()) //Prices falling in the last timer
 				{
 					Timer_Trend[i].pop_front();
 					Timer_Trend[i].push_back(1);
 				}
-				else //Prices not rising in the last timer
+				else //Prices not falling in the last timer
 				{
 					Timer_Trend[i].pop_front();
 					Timer_Trend[i].push_back(0);

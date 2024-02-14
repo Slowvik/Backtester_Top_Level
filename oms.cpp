@@ -1,4 +1,3 @@
-#pragma once
 #include "common.h"
 #include "strat.h"
 #include "mdr.h"
@@ -13,12 +12,13 @@ int main()
 	
 	//Variable initialisations:
 	string date;
-	ifstream date_reader("date.txt", ios::in);
+	ifstream date_reader(filepath_common + "date.txt", ios::in);
 	date_reader>>date;
 	date_reader.close();
 
 	START_OF_DAY = epoch_time(date);
-	END_OF_DAY = epoch_time(date, "0330");
+	END_OF_DAY = epoch_time(date, "1530");
+	cout<<"EOD IS "<<END_OF_DAY<<endl;
 
 	long long current_time = START_OF_DAY;
 

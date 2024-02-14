@@ -61,7 +61,7 @@ void MDR::ReadNextMarketDataUpdate()
 		mkt_data_update.clear();
 
 		stream_mkt_data >> line;
-
+		
 		istringstream ss(line);
 		while (getline(ss, val, ','))
 		{
@@ -115,14 +115,14 @@ pair<vector<long long>, int> MDR::GetNextEvent() //central hub in MDR
 	}
 	else if (eof_mkt_data)
 	{
-		cout << " NO MORE MARKET DATA UPDATES\n";
+		cout << "NO MORE MARKET DATA UPDATES\n";
 		mkt_data_update.clear();
 		mkt_data_update = eod_vec;
 		stream_mkt_data.close();
 	}
 	else if (eof_trade_print)
 	{
-		cout << " NO MORE TRADES\n";
+		cout << "NO MORE TRADES\n";
 		trade_print.clear();
 		trade_print = eod_vec;
 		stream_trade_print.close();
@@ -162,8 +162,8 @@ MDR::MDR(string date)
 {
 	cout << "Initialising Market Data Reader\n";
 
-	filename_mkt_data = date + ".csv";
-	filename_trade_print = date + "_prints.csv";
+	filename_mkt_data = filepath_common + date + ".csv";
+	filename_trade_print = filepath_common + date + "_prints.csv";
 
 	//Opening the two files with the two filestreams:
 	stream_mkt_data.open(filename_mkt_data.c_str());
@@ -173,5 +173,3 @@ MDR::MDR(string date)
 	ReadNextMarketDataUpdate();
 	ReadNextTradePrint();
 }
-
-

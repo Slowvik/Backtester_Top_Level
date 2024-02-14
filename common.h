@@ -1,3 +1,6 @@
+#ifndef COMMON_H_
+#define COMMON_H_
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -11,8 +14,11 @@
 #include <deque>
 #include <cmath>
 
+using namespace std;
+
 long long START_OF_DAY;
 long long END_OF_DAY;
+string filepath_common = ".\\Input Files\\";
 
 long long epoch_time(string date, string time = "0915")
 {
@@ -149,3 +155,5 @@ class Orderbook
 			return os;
 		}
 };
+
+#endif
