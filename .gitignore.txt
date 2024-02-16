@@ -1,6 +1,0 @@
-*.exe
-/Input Files/*.csv
-.idea
-Tester.cpp
-*.dll
-/.vscode/
