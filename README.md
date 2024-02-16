@@ -6,7 +6,7 @@ An order management system written in C++ with the following features:
 
 USAGE REQUIREMENTS: 
 1. Market Data files used for this are available at https://www.dropbox.com/scl/fo/tyyezv4ihffu953faaxmh/h?dl=0&rlkey=rqk19wb4413lemjjw2od1jecv. They need to be downloaded and put in thefolder "Input Files"
-2. A C++ compiler
+2. A C++ compiler (I used g++)
 
 For Windows: 
 1. In cmd, type: git clone https://github.com/Slowvik/Backtester_Top_Level.git
