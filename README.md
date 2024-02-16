@@ -11,7 +11,11 @@ USAGE REQUIREMENTS:
 For Windows: 
 1. In cmd, type: git clone https://github.com/Slowvik/Backtester_Top_Level.git
 2. Navigate to the folder in cmd and compile using: g++ *.cpp -o Backtester.exe (assuming g++ compiler is installed, can change to clang or whatever else is installed. Can change the name of the executable and add more compilation options as desired)
-3. Alternatively, after downloading, open the folder Backtester_Top_Level in VSCode. Configure tasks.json and modify ${file} in args to ${workspaceFolder}/*.cpp
+3. Alternatively, after downloading, open the folder Backtester_Top_Level in VSCode. Configure tasks.json and modify ${file} in args to ${workspaceFolder}/*.cpp. Then debug and run.
+4. CMake file for Windows coming soon
+
+For Linux:
+1. CMake file for Linux Coming soon
 
 TODO:
 
