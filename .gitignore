@@ -1,0 +1,9 @@
+*.exe
+/Build/*
+/Input Files/*.csv
+.idea
+Tester.cpp
+*.dll
+.vscode/*
+.vscode/launch.json
+.vscode/tasks.json
