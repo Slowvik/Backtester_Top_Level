@@ -7,3 +7,4 @@ Tester.cpp
 .vscode/*
 .vscode/launch.json
 .vscode/tasks.json
+*.json
