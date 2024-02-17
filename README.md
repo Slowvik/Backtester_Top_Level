@@ -19,11 +19,10 @@ For Linux:
 
 TODO:
 
-1. Verify standards according to standards.txt
-2. Upgrade the entire code to meet C++17 standards
-3. Optimise the code to meet low-latency standards
-4. Write comprehensive unit tests for all modules
-5. Compile and run on WSL (and create a CMake for Linux)
-6. Create a CMake for Windows
-7. Deploy a more realistic strategy
+1. Upgrade the entire code to meet C++17 standards
+2. Optimise the code to meet low-latency standards
+3. Write comprehensive unit tests for all modules
+4. Compile and run on WSL (and create a CMake for Linux)
+5. Create a CMake for Windows
+6. Deploy a more realistic strategy
 
